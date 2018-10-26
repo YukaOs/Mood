@@ -1,3 +1,8 @@
-.moon-icon{
-    color: blue;
+body {
+    background-color: #e7ecef;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
