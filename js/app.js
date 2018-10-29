@@ -10,8 +10,7 @@ $(document).ready(function () {
         }
     }
     function showPosition(position) {
-        var weather = jQuery.get('https://api.openweathermap.org/data/2.5/weather?lat=38.706506999999995&lon=-9.175317&APPID=' + APPID).then(function(data)
-        {
+        var weather = jQuery.get('https://api.openweathermap.org/data/2.5/weather?lat=38.706506999999995&lon=-9.175317&APPID=' + APPID).then(function (data) {
             x.innerHTML = data.name;
         });
 
@@ -23,3 +22,20 @@ $(document).ready(function () {
 
     main();
 });
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
