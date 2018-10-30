@@ -10,8 +10,9 @@ $(document).ready(function () {
         }
     }
     function showPosition(position) {
-        var weather = jQuery.get('https://api.openweathermap.org/data/2.5/weather?lat=38.706506999999995&lon=-9.175317&APPID=' + APPID).then(function (data) {
-            x.innerHTML = data.name;
+        let url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&APPID=' + APPID;
+        let weather = jQuery.get(url).then(function (data) {
+            x.innerHTML = data.name
         });
 
     }
