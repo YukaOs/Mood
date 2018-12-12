@@ -17,6 +17,17 @@ $(document).ready(function () {
 
     }
 
+    function getWeather(weather){
+let url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&APPID=' + APPID;
+let weather = jQuery.get(url).then(function(data){
+    x.innerHTML = data.name
+})   
+}
+function main() {
+    getWeather();
+}
+    main();
+
     function main() {
         getLocation();
     }
